@@ -47,8 +47,18 @@ class AppState {
     func formateDateToMonthString() {
         let formatter = NSDateFormatter()
         formatter.timeStyle = .ShortStyle
-        formatter.dateFormat = "MMMM"
-        AppState.sharedstate.monthStateString = formatter.stringFromDate(AppState.sharedstate.stateDate!)
-
+        formatter.dateFormat = "yyyy"
+        
+        let currentYear = formatter.stringFromDate(AppState.sharedstate.date)
+        let stateYear = formatter.stringFromDate(AppState.sharedstate.stateDate!)
+        
+        if currentYear == stateYear {
+            formatter.dateFormat = "MMMM"
+            AppState.sharedstate.monthStateString = formatter.stringFromDate(AppState.sharedstate.stateDate!)
+        
+        } else {
+            formatter.dateFormat = "MMMM YYYY"
+            AppState.sharedstate.monthStateString = formatter.stringFromDate(AppState.sharedstate.stateDate!)
+        }
     }
 }
