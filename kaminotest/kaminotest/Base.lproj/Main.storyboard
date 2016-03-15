@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -83,9 +84,12 @@
                                     <constraint firstAttribute="trailing" secondItem="jel-Tj-yw2" secondAttribute="trailing" constant="20" symbolic="YES" id="xH5-6L-hbo"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2R5-kY-2zK">
-                                <rect key="frame" x="20" y="90" width="560" height="490"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2R5-kY-2zK" customClass="BarGraph" customModule="kaminotest" customModuleProvider="target">
+                                <rect key="frame" x="60" y="90" width="480" height="192"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2R5-kY-2zK" secondAttribute="height" multiplier="100:40" id="SNp-Qh-9ZY"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -97,10 +101,10 @@
                             <constraint firstAttribute="trailing" secondItem="Q6V-Ew-SfA" secondAttribute="trailing" id="FTJ-b2-ydb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2R5-kY-2zK" secondAttribute="trailing" constant="169" id="Itz-EA-dk1"/>
                             <constraint firstItem="2R5-kY-2zK" firstAttribute="top" secondItem="Q6V-Ew-SfA" secondAttribute="bottom" constant="20" id="JM3-yN-KTd"/>
-                            <constraint firstAttribute="trailing" secondItem="2R5-kY-2zK" secondAttribute="trailing" constant="20" id="Jlq-bc-glx"/>
+                            <constraint firstAttribute="trailing" secondItem="2R5-kY-2zK" secondAttribute="trailing" constant="60" id="Jlq-bc-glx"/>
                             <constraint firstItem="jUm-26-DTo" firstAttribute="bottom" secondItem="Q6V-Ew-SfA" secondAttribute="top" id="M5c-1h-3mc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2R5-kY-2zK" secondAttribute="bottom" constant="20" id="Nk6-hG-nbD"/>
-                            <constraint firstItem="2R5-kY-2zK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="VH0-Vp-5mM"/>
+                            <constraint firstItem="2R5-kY-2zK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="VH0-Vp-5mM"/>
                             <constraint firstItem="jUm-26-DTo" firstAttribute="leading" secondItem="Q6V-Ew-SfA" secondAttribute="leading" id="WKB-Ca-jA2"/>
                             <constraint firstItem="jUm-26-DTo" firstAttribute="trailing" secondItem="Q6V-Ew-SfA" secondAttribute="trailing" id="avW-Yy-YkT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2R5-kY-2zK" secondAttribute="trailing" constant="153" id="ccW-2A-ZFW"/>
@@ -110,6 +114,7 @@
                                 <exclude reference="E9W-gJ-7oI"/>
                                 <exclude reference="Itz-EA-dk1"/>
                                 <exclude reference="ccW-2A-ZFW"/>
+                                <exclude reference="Nk6-hG-nbD"/>
                             </mask>
                         </variation>
                     </view>
