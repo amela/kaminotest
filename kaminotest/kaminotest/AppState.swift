@@ -10,21 +10,19 @@ import Foundation
 
 class AppState: NSObject {
     
-    static let sharedstate = AppState()
+    static let date = NSDate()
     
-    let date = NSDate()
+    static weak var dateStateChanged : SelectedDateChanged?
     
-    weak var dateStateChanged : SelectedDateChanged?
-    
-    var stateDate: NSDate? {
+    static var stateDate: NSDate? {
         didSet {
             self.dateStateChanged?.changedDate()
         }
     }
     
-    var monthStateString: String?
+    static var monthStateString: String?
     
-    func addMonthToDate () -> NSDate? {
+    static func addMonthToDate () -> NSDate? {
         if let stateDate = self.stateDate {
             let date = NSCalendar.currentCalendar().dateByAddingUnit(.Month, value: 1, toDate: stateDate, options: [])
             return date!
@@ -32,7 +30,7 @@ class AppState: NSObject {
         return nil
     }
     
-    func substractMonthToDate () -> NSDate? {
+    static func substractMonthToDate () -> NSDate? {
         if let stateDate = self.stateDate {
             let date = NSCalendar.currentCalendar().dateByAddingUnit(.Month, value: -1, toDate: stateDate, options: [])
             return date!
@@ -40,31 +38,31 @@ class AppState: NSObject {
         return nil
     }
     
-    func getMonthString () -> String {
+    static func getMonthString () -> String {
         let formatter = NSDateFormatter()
         formatter.timeStyle = .ShortStyle
         formatter.dateFormat = "MMMM"
-        AppState.sharedstate.monthStateString = formatter.stringFromDate(date)
-        let monthString = formatter.stringFromDate(AppState.sharedstate.stateDate!)
+        AppState.monthStateString = formatter.stringFromDate(date)
+        let monthString = formatter.stringFromDate(AppState.stateDate!)
         return (monthString)
     }
     
     
-    func formateDateToMonthString() {
+    static func formateDateToMonthString() {
         let formatter = NSDateFormatter()
         formatter.timeStyle = .ShortStyle
         formatter.dateFormat = "yyyy"
         
-        let currentYear = formatter.stringFromDate(AppState.sharedstate.date)
-        let stateYear = formatter.stringFromDate(AppState.sharedstate.stateDate!)
+        let currentYear = formatter.stringFromDate(AppState.date)
+        let stateYear = formatter.stringFromDate(AppState.stateDate!)
         
         if currentYear == stateYear {
             formatter.dateFormat = "MMMM"
-            AppState.sharedstate.monthStateString = formatter.stringFromDate(AppState.sharedstate.stateDate!)
+            AppState.monthStateString = formatter.stringFromDate(AppState.stateDate!)
         
         } else {
             formatter.dateFormat = "MMMM YYYY"
-            AppState.sharedstate.monthStateString = formatter.stringFromDate(AppState.sharedstate.stateDate!)
+            AppState.monthStateString = formatter.stringFromDate(AppState.stateDate!)
         }
     }
 }

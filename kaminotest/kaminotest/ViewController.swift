@@ -13,15 +13,16 @@ class ViewController: UIViewController, SelectedDateChanged {
     // MARK: -  Outlets
     
     @IBOutlet weak var stateMonthLabel: UILabel!
+    @IBOutlet weak var barGraph: BarGraph!
     
     
     // MARK: -  Button actions
     
     @IBAction func leftButton(sender: UIButton) {
         print("month--")
-        AppState.sharedstate.stateDate = AppState.sharedstate.substractMonthToDate()
+        AppState.stateDate = AppState.substractMonthToDate()
         
-        AppState.sharedstate.formateDateToMonthString()
+        AppState.formateDateToMonthString()
         
         let newLabel = UILabel(frame: stateMonthLabel.frame)
         newLabel.text = stateMonthLabel.text
@@ -43,14 +44,21 @@ class ViewController: UIViewController, SelectedDateChanged {
             }) { (completed) -> Void in
                 newLabel.removeFromSuperview()
         }
+        
+       
+        
+        GraphDatasource.myGraphData =  GraphDatasource.getDataForMonth(4, year: 2015)
+        print(GraphDatasource.myGraphData)
+        
+        barGraph.reload()
     }
     
     
     @IBAction func rightButton(sender: UIButton) {
         print("month++")
-        AppState.sharedstate.stateDate = AppState.sharedstate.addMonthToDate()
+        AppState.stateDate = AppState.addMonthToDate()
         
-        AppState.sharedstate.formateDateToMonthString()
+        AppState.formateDateToMonthString()
         
         let newLabel = UILabel(frame: stateMonthLabel.frame)
         newLabel.text = stateMonthLabel.text
@@ -70,12 +78,14 @@ class ViewController: UIViewController, SelectedDateChanged {
             }) { (completed) -> Void in
                 newLabel.removeFromSuperview()
         }
+        
+        barGraph.reload()
     }
     
     // MARK: -  Functions
     
     func updateLabel() {
-        if let month = AppState.sharedstate.monthStateString {
+        if let month = AppState.monthStateString {
             //print(month)
             stateMonthLabel.text = month
         }
@@ -93,13 +103,13 @@ class ViewController: UIViewController, SelectedDateChanged {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AppState.sharedstate.stateDate = AppState.sharedstate.date
+        AppState.stateDate = AppState.date
         //print(AppState.sharedstate.stateDate)
         
-        AppState.sharedstate.formateDateToMonthString()
+        AppState.formateDateToMonthString()
         self.updateLabel()
         
-        AppState.sharedstate.dateStateChanged = self
+        AppState.dateStateChanged = self
         
 }
     

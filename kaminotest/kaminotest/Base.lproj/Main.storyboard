@@ -39,19 +39,6 @@
                                             <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M29-s4-wDT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-hp-gCi">
-                                        <rect key="frame" x="20" y="11" width="80" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="Q1I-S4-BNB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title="Left">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNQ-DZ-xN6"/>
-                                        </connections>
-                                    </button>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nS9-9s-vhs">
                                         <rect key="frame" x="100" y="0.0" width="400" height="50"/>
                                         <subviews>
@@ -70,6 +57,19 @@
                                             <constraint firstItem="Oms-98-b8S" firstAttribute="top" secondItem="nS9-9s-vhs" secondAttribute="top" id="l9V-5F-aEA"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-hp-gCi">
+                                        <rect key="frame" x="20" y="11" width="80" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Q1I-S4-BNB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Left">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNQ-DZ-xN6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -119,6 +119,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="barGraph" destination="2R5-kY-2zK" id="uYs-yn-RI7"/>
                         <outlet property="stateMonthLabel" destination="Oms-98-b8S" id="ZkB-vg-Rre"/>
                     </connections>
                 </viewController>
