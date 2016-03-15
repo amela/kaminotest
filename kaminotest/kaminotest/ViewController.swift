@@ -32,12 +32,12 @@ class ViewController: UIViewController, SelectedDateChanged {
         
         updateLabel()
         
-        stateMonthLabel.frame = CGRect(x: stateMonthLabel.frame.origin.x-stateMonthLabel.frame.size.width+sender.frame.size.width+20, y: stateMonthLabel.frame.origin.y, width: stateMonthLabel.frame.size.width, height: stateMonthLabel.frame.size.height)
+        stateMonthLabel.frame = CGRect(x: stateMonthLabel.frame.origin.x-stateMonthLabel.frame.size.width, y: stateMonthLabel.frame.origin.y, width: stateMonthLabel.frame.size.width, height: stateMonthLabel.frame.size.height)
         
         stateMonthLabel.setNeedsLayout()
         
         UIView.animateWithDuration(0.3, animations: { () -> Void in
-            newLabel.frame = CGRect(x: newLabel.frame.origin.x+newLabel.frame.size.width-sender.frame.size.width-20, y: newLabel.frame.origin.y, width: newLabel.frame.size.width, height: newLabel.frame.size.height)
+            newLabel.frame = CGRect(x: newLabel.frame.origin.x+newLabel.frame.size.width, y: newLabel.frame.origin.y, width: newLabel.frame.size.width, height: newLabel.frame.size.height)
             
             self.view.layoutIfNeeded()
             }) { (completed) -> Void in
@@ -61,10 +61,10 @@ class ViewController: UIViewController, SelectedDateChanged {
         
         updateLabel()
         
-        stateMonthLabel.frame = CGRect(x: stateMonthLabel.frame.origin.x+stateMonthLabel.frame.size.width-sender.frame.size.width-20, y: stateMonthLabel.frame.origin.y, width: stateMonthLabel.frame.size.width, height: stateMonthLabel.frame.size.height)
+        stateMonthLabel.frame = CGRect(x: stateMonthLabel.frame.origin.x+stateMonthLabel.frame.size.width, y: stateMonthLabel.frame.origin.y, width: stateMonthLabel.frame.size.width, height: stateMonthLabel.frame.size.height)
         stateMonthLabel.setNeedsLayout()
         UIView.animateWithDuration(0.3, animations: { () -> Void in
-            newLabel.frame = CGRect(x: newLabel.frame.origin.x-newLabel.frame.size.width+sender.frame.size.width+20, y: newLabel.frame.origin.y, width: newLabel.frame.size.width, height: newLabel.frame.size.height)
+            newLabel.frame = CGRect(x: newLabel.frame.origin.x-newLabel.frame.size.width, y: newLabel.frame.origin.y, width: newLabel.frame.size.width, height: newLabel.frame.size.height)
             
             self.view.layoutIfNeeded()
             }) { (completed) -> Void in
@@ -99,7 +99,7 @@ class ViewController: UIViewController, SelectedDateChanged {
         AppState.sharedstate.formateDateToMonthString()
         self.updateLabel()
         
-        //self.stateMonthLabel = self
+        //self.SelectedDateChanged = self
         
         
         

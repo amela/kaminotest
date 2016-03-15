@@ -47,33 +47,37 @@
                                             <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNQ-DZ-xN6"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oms-98-b8S">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nS9-9s-vhs">
                                         <rect key="frame" x="100" y="0.0" width="400" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oms-98-b8S">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Oms-98-b8S" firstAttribute="leading" secondItem="nS9-9s-vhs" secondAttribute="leading" id="E5q-NR-nte"/>
+                                            <constraint firstAttribute="bottom" secondItem="Oms-98-b8S" secondAttribute="bottom" id="QzW-DB-9dc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Oms-98-b8S" secondAttribute="trailing" id="W1P-xA-6ux"/>
+                                            <constraint firstItem="Oms-98-b8S" firstAttribute="top" secondItem="nS9-9s-vhs" secondAttribute="top" id="l9V-5F-aEA"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Oms-98-b8S" secondAttribute="bottom" id="9Mh-Jh-FMe"/>
-                                    <constraint firstItem="Oms-98-b8S" firstAttribute="top" secondItem="Q6V-Ew-SfA" secondAttribute="top" id="9Ol-Jw-tXI"/>
                                     <constraint firstItem="jel-Tj-yw2" firstAttribute="centerY" secondItem="Q6V-Ew-SfA" secondAttribute="centerY" id="AB1-Dx-fNG"/>
-                                    <constraint firstItem="Oms-98-b8S" firstAttribute="leading" secondItem="fgR-hp-gCi" secondAttribute="trailing" id="H44-Kp-pQi"/>
                                     <constraint firstAttribute="height" constant="50" id="J2a-JX-eMP"/>
+                                    <constraint firstItem="nS9-9s-vhs" firstAttribute="top" secondItem="Q6V-Ew-SfA" secondAttribute="top" id="LU5-Jy-9hG"/>
                                     <constraint firstItem="fgR-hp-gCi" firstAttribute="leading" secondItem="Q6V-Ew-SfA" secondAttribute="leading" constant="20" symbolic="YES" id="MHL-kc-5xj"/>
-                                    <constraint firstItem="Oms-98-b8S" firstAttribute="centerX" secondItem="Q6V-Ew-SfA" secondAttribute="centerX" id="Xn6-ng-jIJ"/>
-                                    <constraint firstItem="jel-Tj-yw2" firstAttribute="leading" secondItem="Oms-98-b8S" secondAttribute="trailing" id="j9l-Ee-kfC"/>
+                                    <constraint firstItem="nS9-9s-vhs" firstAttribute="leading" secondItem="fgR-hp-gCi" secondAttribute="trailing" id="PnI-jZ-UDD"/>
+                                    <constraint firstAttribute="bottom" secondItem="nS9-9s-vhs" secondAttribute="bottom" id="Y0v-fy-5FO"/>
+                                    <constraint firstItem="jel-Tj-yw2" firstAttribute="leading" secondItem="nS9-9s-vhs" secondAttribute="trailing" id="nnE-6b-UwJ"/>
                                     <constraint firstItem="fgR-hp-gCi" firstAttribute="centerY" secondItem="Q6V-Ew-SfA" secondAttribute="centerY" id="sab-mu-uN2"/>
                                     <constraint firstAttribute="trailing" secondItem="jel-Tj-yw2" secondAttribute="trailing" constant="20" symbolic="YES" id="xH5-6L-hbo"/>
-                                    <constraint firstItem="Oms-98-b8S" firstAttribute="centerY" secondItem="Q6V-Ew-SfA" secondAttribute="centerY" id="yHs-YM-8X0"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Xn6-ng-jIJ"/>
-                                        <exclude reference="yHs-YM-8X0"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2R5-kY-2zK">
                                 <rect key="frame" x="20" y="70" width="560" height="510"/>
