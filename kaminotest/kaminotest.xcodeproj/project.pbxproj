@@ -13,6 +13,7 @@
 		A1ACB4171C97FBDF000A1BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4161C97FBDF000A1BE8 /* Assets.xcassets */; };
 		A1ACB41A1C97FBDF000A1BE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4181C97FBDF000A1BE8 /* LaunchScreen.storyboard */; };
 		A1ACB4221C97FFCE000A1BE8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACB4211C97FFCE000A1BE8 /* AppState.swift */; };
+		A1ACB4241C98261A000A1BE8 /* NotifyControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACB4231C98261A000A1BE8 /* NotifyControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A1ACB4191C97FBDF000A1BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1ACB41B1C97FBDF000A1BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1ACB4211C97FFCE000A1BE8 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A1ACB4231C98261A000A1BE8 /* NotifyControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A1ACB40F1C97FBDF000A1BE8 /* AppDelegate.swift */,
 				A1ACB4111C97FBDF000A1BE8 /* ViewController.swift */,
 				A1ACB4211C97FFCE000A1BE8 /* AppState.swift */,
+				A1ACB4231C98261A000A1BE8 /* NotifyControllerProtocol.swift */,
 				A1ACB4131C97FBDF000A1BE8 /* Main.storyboard */,
 				A1ACB4161C97FBDF000A1BE8 /* Assets.xcassets */,
 				A1ACB4181C97FBDF000A1BE8 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1ACB4241C98261A000A1BE8 /* NotifyControllerProtocol.swift in Sources */,
 				A1ACB4221C97FFCE000A1BE8 /* AppState.swift in Sources */,
 				A1ACB4121C97FBDF000A1BE8 /* ViewController.swift in Sources */,
 				A1ACB4101C97FBDF000A1BE8 /* AppDelegate.swift in Sources */,

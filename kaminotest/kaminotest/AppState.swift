@@ -8,13 +8,19 @@
 
 import Foundation
 
-class AppState {
+class AppState: NSObject {
     
     static let sharedstate = AppState()
     
     let date = NSDate()
     
-    var stateDate: NSDate?
+    weak var dateStateChanged : SelectedDateChanged?
+    
+    var stateDate: NSDate? {
+        didSet {
+            self.dateStateChanged?.changedDate()
+        }
+    }
     
     var monthStateString: String?
     
