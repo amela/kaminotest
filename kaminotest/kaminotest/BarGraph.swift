@@ -15,33 +15,30 @@ class BarGraph: UIView {
     
     // public
     
-    var barColor: UIColor = UIColor.purpleColor()
+    var barColor: UIColor = UIColor.yellowColor()
     
-    var graphWidth = 250
-    var graphHeight = -250
-    
-    var numberOfBars = 6
+    var numberOfBars = 0
     var barWidth: CGFloat = 20.0
-    
-    var spaceBetweenBars = 10.0 {
-        didSet {
-            self.halfSpaceBetweenBars = self.spaceBetweenBars/2.0
-        }
-    }
-    
-    var myBarData = [15.7, 14.2, 5.6, 9.5, 15.4]
+    var myBarData : [Double] = []
     
     var myScale = 20.0
+    
+    public func reload() {
+        drawBars()
+    }
 
     
     // private
     
-    private var halfSpaceBetweenBars = 5.0
-    
     //private var previousGraphState: [AnyObject] = []
     
     
-    func drawBars() {
+    private func drawBars() {
+        if myBarData.maxElement() > myScale {
+            myScale = myBarData.maxElement()!
+        }
+        
+        
         let context = UIGraphicsGetCurrentContext()
         
         var x = CGFloat(0)
@@ -67,13 +64,12 @@ class BarGraph: UIView {
         }
     }
     
-
-    
     override func drawRect(rect: CGRect) {
         drawBars()
-        
-    
     }
     
-    
+    override func awakeFromNib() {
+        let dataSource = GraphDatasource()
+        myBarData = dataSource.myGraphData
+    }
 }
