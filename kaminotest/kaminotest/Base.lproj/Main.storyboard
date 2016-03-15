@@ -18,11 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUm-26-DTo" userLabel="below status">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                <color key="backgroundColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6V-Ew-SfA">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jel-Tj-yw2">
-                                        <rect key="frame" x="500" y="10" width="80" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jel-Tj-yw2">
+                                        <rect key="frame" x="500" y="11" width="80" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Tyx-hl-umq"/>
                                         </constraints>
@@ -34,8 +38,8 @@
                                             <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M29-s4-wDT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-hp-gCi">
-                                        <rect key="frame" x="20" y="10" width="80" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-hp-gCi">
+                                        <rect key="frame" x="20" y="11" width="80" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Q1I-S4-BNB"/>
                                         </constraints>
@@ -80,24 +84,30 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2R5-kY-2zK">
-                                <rect key="frame" x="20" y="70" width="560" height="510"/>
+                                <rect key="frame" x="20" y="90" width="560" height="490"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Q6V-Ew-SfA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="16K-w8-Eyr"/>
+                            <constraint firstItem="Q6V-Ew-SfA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7PA-fA-rCQ"/>
+                            <constraint firstItem="jUm-26-DTo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Dmy-bf-uQy"/>
                             <constraint firstItem="Q6V-Ew-SfA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="E9W-gJ-7oI"/>
                             <constraint firstAttribute="trailing" secondItem="Q6V-Ew-SfA" secondAttribute="trailing" id="FTJ-b2-ydb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2R5-kY-2zK" secondAttribute="trailing" constant="169" id="Itz-EA-dk1"/>
                             <constraint firstItem="2R5-kY-2zK" firstAttribute="top" secondItem="Q6V-Ew-SfA" secondAttribute="bottom" constant="20" id="JM3-yN-KTd"/>
                             <constraint firstAttribute="trailing" secondItem="2R5-kY-2zK" secondAttribute="trailing" constant="20" id="Jlq-bc-glx"/>
+                            <constraint firstItem="jUm-26-DTo" firstAttribute="bottom" secondItem="Q6V-Ew-SfA" secondAttribute="top" id="M5c-1h-3mc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2R5-kY-2zK" secondAttribute="bottom" constant="20" id="Nk6-hG-nbD"/>
                             <constraint firstItem="2R5-kY-2zK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="VH0-Vp-5mM"/>
+                            <constraint firstItem="jUm-26-DTo" firstAttribute="leading" secondItem="Q6V-Ew-SfA" secondAttribute="leading" id="WKB-Ca-jA2"/>
+                            <constraint firstItem="jUm-26-DTo" firstAttribute="trailing" secondItem="Q6V-Ew-SfA" secondAttribute="trailing" id="avW-Yy-YkT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2R5-kY-2zK" secondAttribute="trailing" constant="153" id="ccW-2A-ZFW"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="E9W-gJ-7oI"/>
                                 <exclude reference="Itz-EA-dk1"/>
                                 <exclude reference="ccW-2A-ZFW"/>
                             </mask>

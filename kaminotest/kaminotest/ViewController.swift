@@ -99,20 +99,9 @@ class ViewController: UIViewController, SelectedDateChanged {
         AppState.sharedstate.formateDateToMonthString()
         self.updateLabel()
         
-        //self.SelectedDateChanged = self
+        AppState.sharedstate.dateStateChanged = self
         
-        
-        
-        // for animation
-        //self.stateMonthLabel.transform = CGAffineTransformMakeTranslation(CGRectGetWidth(self.view.frame), 0.0)
-        //UIView.animateWithDuration(2.0) { () -> Void in
-        //    self.stateMonthLabel.transform = CGAffineTransformMakeTranslation(CGRectGetWidth(CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100)
-        //        self.view.frame.width/CGFloat(2)), 0)
-        //}
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    
+}
     
 
     override func didReceiveMemoryWarning() {
