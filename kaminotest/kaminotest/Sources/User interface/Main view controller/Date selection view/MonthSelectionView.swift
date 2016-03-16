@@ -18,6 +18,7 @@ public class MonthSelectionView: UIView {
     public var selectedDate = NSDate() {
         didSet {
             updateLabel()
+            delegate?.monthSelectionViewChangedSelectedDate(self, date: selectedDate)
         }
     }
     
@@ -27,9 +28,7 @@ public class MonthSelectionView: UIView {
     // MARK: -  Button actions
     
     @IBAction func leftButton(sender: UIButton) {
-        if let newDate = DateTools.addMonthsToDate(selectedDate, count: -1) {
-            selectedDate = newDate
-        }
+        selectedDate = DateTools.addMonthsToDate(selectedDate, count: -1)
         
         let newLabel = UILabel(frame: stateMonthLabel.frame)
         newLabel.text = stateMonthLabel.text
@@ -55,9 +54,7 @@ public class MonthSelectionView: UIView {
     
     
     @IBAction func rightButton(sender: UIButton) {
-        if let newDate = DateTools.addMonthsToDate(selectedDate, count: 1) {
-            selectedDate = newDate
-        }
+        selectedDate = DateTools.addMonthsToDate(selectedDate, count: 1)
         
         let newLabel = UILabel(frame: stateMonthLabel.frame)
         newLabel.text = stateMonthLabel.text

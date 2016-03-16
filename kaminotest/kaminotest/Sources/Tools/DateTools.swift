@@ -10,12 +10,25 @@ import UIKit
 
 class DateTools: NSObject {
     
-    static func addMonthsToDate(date: NSDate, count: Int) -> NSDate? {
+    static func addMonthsToDate(date: NSDate, count: Int) -> NSDate {
         if let date = NSCalendar.currentCalendar().dateByAddingUnit(.Month, value: count, toDate: date, options: []) {
             return date
         } else {
             return date
         }
+    }
+    static func addDaysToDate(date: NSDate, count: Int) -> NSDate {
+        if let date = NSCalendar.currentCalendar().dateByAddingUnit(.Day, value: count, toDate: date, options: []) {
+            return date
+        } else {
+            return date
+        }
+    }
+    static func beginningOfDay(date: NSDate) -> NSDate {
+        return NSCalendar.currentCalendar().dateFromComponents(NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month, NSCalendarUnit.Day], fromDate: date))!
+    }
+    static func beginningOfMonth(date: NSDate) -> NSDate {
+        return NSCalendar.currentCalendar().dateFromComponents(NSCalendar.currentCalendar().components([NSCalendarUnit.Year, NSCalendarUnit.Month], fromDate: date))!
     }
     
     static func getMonthStringfromDate(date: NSDate) -> String {

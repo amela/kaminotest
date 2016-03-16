@@ -34,6 +34,10 @@ public class BarGraph: UIView {
     
     
     private func drawBars() {
+        if myBarData.count == 0 {
+            return // can not draw if no elements are present
+        }
+        
         if myBarData.maxElement() > myScale {
             myScale = myBarData.maxElement()!
         }

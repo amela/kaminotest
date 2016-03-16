@@ -12,6 +12,7 @@
 		21695C401C9979F000B29360 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C3E1C9979F000B29360 /* BarGraph.swift */; };
 		21695C431C997A0500B29360 /* MonthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C421C997A0500B29360 /* MonthSelectionView.swift */; };
 		21695C461C997C0500B29360 /* DateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C451C997C0500B29360 /* DateTools.swift */; };
+		21695C481C997E9C00B29360 /* WrittenLinesOfCodeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C471C997E9C00B29360 /* WrittenLinesOfCodeObject.swift */; };
 		A1ACB4151C97FBDF000A1BE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4131C97FBDF000A1BE8 /* Main.storyboard */; };
 		A1ACB4171C97FBDF000A1BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4161C97FBDF000A1BE8 /* Assets.xcassets */; };
 		A1ACB41A1C97FBDF000A1BE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4181C97FBDF000A1BE8 /* LaunchScreen.storyboard */; };
@@ -23,6 +24,7 @@
 		21695C3E1C9979F000B29360 /* BarGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
 		21695C421C997A0500B29360 /* MonthSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthSelectionView.swift; sourceTree = "<group>"; };
 		21695C451C997C0500B29360 /* DateTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTools.swift; sourceTree = "<group>"; };
+		21695C471C997E9C00B29360 /* WrittenLinesOfCodeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrittenLinesOfCodeObject.swift; sourceTree = "<group>"; };
 		A1ACB40C1C97FBDF000A1BE8 /* kaminotest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kaminotest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1ACB4141C97FBDF000A1BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1ACB4161C97FBDF000A1BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		21695C261C99795400B29360 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				21695C471C997E9C00B29360 /* WrittenLinesOfCodeObject.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21695C481C997E9C00B29360 /* WrittenLinesOfCodeObject.swift in Sources */,
 				21695C401C9979F000B29360 /* BarGraph.swift in Sources */,
 				21695C351C99795400B29360 /* ViewController.swift in Sources */,
 				21695C431C997A0500B29360 /* MonthSelectionView.swift in Sources */,

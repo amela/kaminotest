@@ -28,7 +28,15 @@ class ViewController: UIViewController, MonthSelectionViewDelegate {
     
     // delegate
     func monthSelectionViewChangedSelectedDate(sender: MonthSelectionView, date: NSDate) {
-        // TODO: add inject new data to the graph view
+        let startDate = DateTools.beginningOfMonth(date)
+        let endDate = DateTools.addMonthsToDate(startDate, count: 1)
+        
+        var countArray = [Double]()
+        WrittenLinesOfCodeObject.fetchDataBetween(startDate, endDate: endDate).forEach { item in
+            countArray.append(Double(item.count))
+        }
+        self.barGraph.myBarData = countArray
+        self.barGraph.reload()
     }
 }
 
