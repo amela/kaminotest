@@ -23,7 +23,8 @@ public class BarGraph: UIView {
     var myScale = 20.0
     
     public func reload() {
-        drawBars()
+        // drawBars() Calling drawBars directly causes an error as there is no context at this point.
+        setNeedsDisplay() // this triggeres redraw and draw rect will be called again with the new data
     }
 
     
