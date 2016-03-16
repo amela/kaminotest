@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1ACB4101C97FBDF000A1BE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACB40F1C97FBDF000A1BE8 /* AppDelegate.swift */; };
-		A1ACB4121C97FBDF000A1BE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACB4111C97FBDF000A1BE8 /* ViewController.swift */; };
+		21695C311C99795400B29360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C291C99795400B29360 /* AppDelegate.swift */; };
+		21695C351C99795400B29360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C2F1C99795400B29360 /* ViewController.swift */; };
+		21695C401C9979F000B29360 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C3E1C9979F000B29360 /* BarGraph.swift */; };
+		21695C431C997A0500B29360 /* MonthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C421C997A0500B29360 /* MonthSelectionView.swift */; };
+		21695C461C997C0500B29360 /* DateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C451C997C0500B29360 /* DateTools.swift */; };
+		21695C481C997E9C00B29360 /* WrittenLinesOfCodeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C471C997E9C00B29360 /* WrittenLinesOfCodeObject.swift */; };
 		A1ACB4151C97FBDF000A1BE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4131C97FBDF000A1BE8 /* Main.storyboard */; };
 		A1ACB4171C97FBDF000A1BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4161C97FBDF000A1BE8 /* Assets.xcassets */; };
 		A1ACB41A1C97FBDF000A1BE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4181C97FBDF000A1BE8 /* LaunchScreen.storyboard */; };
-		A1ACB4221C97FFCE000A1BE8 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACB4211C97FFCE000A1BE8 /* AppState.swift */; };
-		A1ACB4241C98261A000A1BE8 /* NotifyControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACB4231C98261A000A1BE8 /* NotifyControllerProtocol.swift */; };
-		A1ACB4261C9835C0000A1BE8 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACB4251C9835C0000A1BE8 /* BarGraph.swift */; };
-		A1ACB4281C9849CA000A1BE8 /* GraphDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACB4271C9849CA000A1BE8 /* GraphDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21695C291C99795400B29360 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21695C2F1C99795400B29360 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21695C3E1C9979F000B29360 /* BarGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
+		21695C421C997A0500B29360 /* MonthSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthSelectionView.swift; sourceTree = "<group>"; };
+		21695C451C997C0500B29360 /* DateTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTools.swift; sourceTree = "<group>"; };
+		21695C471C997E9C00B29360 /* WrittenLinesOfCodeObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrittenLinesOfCodeObject.swift; sourceTree = "<group>"; };
 		A1ACB40C1C97FBDF000A1BE8 /* kaminotest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kaminotest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1ACB40F1C97FBDF000A1BE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1ACB4111C97FBDF000A1BE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1ACB4141C97FBDF000A1BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1ACB4161C97FBDF000A1BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1ACB4191C97FBDF000A1BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1ACB41B1C97FBDF000A1BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1ACB4211C97FFCE000A1BE8 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		A1ACB4231C98261A000A1BE8 /* NotifyControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyControllerProtocol.swift; sourceTree = "<group>"; };
-		A1ACB4251C9835C0000A1BE8 /* BarGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
-		A1ACB4271C9849CA000A1BE8 /* GraphDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +43,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21695C251C99795400B29360 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				21695C441C997BFA00B29360 /* Tools */,
+				21695C261C99795400B29360 /* Data */,
+				21695C281C99795400B29360 /* Main */,
+				21695C2A1C99795400B29360 /* User interface */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		21695C261C99795400B29360 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				21695C471C997E9C00B29360 /* WrittenLinesOfCodeObject.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		21695C281C99795400B29360 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				21695C291C99795400B29360 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		21695C2A1C99795400B29360 /* User interface */ = {
+			isa = PBXGroup;
+			children = (
+				21695C2B1C99795400B29360 /* Main view controller */,
+			);
+			path = "User interface";
+			sourceTree = "<group>";
+		};
+		21695C2B1C99795400B29360 /* Main view controller */ = {
+			isa = PBXGroup;
+			children = (
+				21695C361C9979AA00B29360 /* Date selection view */,
+				21695C3A1C9979AA00B29360 /* Graph */,
+				21695C2F1C99795400B29360 /* ViewController.swift */,
+			);
+			path = "Main view controller";
+			sourceTree = "<group>";
+		};
+		21695C361C9979AA00B29360 /* Date selection view */ = {
+			isa = PBXGroup;
+			children = (
+				21695C421C997A0500B29360 /* MonthSelectionView.swift */,
+			);
+			path = "Date selection view";
+			sourceTree = "<group>";
+		};
+		21695C3A1C9979AA00B29360 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				21695C3E1C9979F000B29360 /* BarGraph.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		21695C441C997BFA00B29360 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				21695C451C997C0500B29360 /* DateTools.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		A1ACB4031C97FBDE000A1BE8 = {
 			isa = PBXGroup;
 			children = (
@@ -62,12 +131,7 @@
 		A1ACB40E1C97FBDF000A1BE8 /* kaminotest */ = {
 			isa = PBXGroup;
 			children = (
-				A1ACB40F1C97FBDF000A1BE8 /* AppDelegate.swift */,
-				A1ACB4111C97FBDF000A1BE8 /* ViewController.swift */,
-				A1ACB4251C9835C0000A1BE8 /* BarGraph.swift */,
-				A1ACB4211C97FFCE000A1BE8 /* AppState.swift */,
-				A1ACB4231C98261A000A1BE8 /* NotifyControllerProtocol.swift */,
-				A1ACB4271C9849CA000A1BE8 /* GraphDatasource.swift */,
+				21695C251C99795400B29360 /* Sources */,
 				A1ACB4131C97FBDF000A1BE8 /* Main.storyboard */,
 				A1ACB4161C97FBDF000A1BE8 /* Assets.xcassets */,
 				A1ACB4181C97FBDF000A1BE8 /* LaunchScreen.storyboard */,
@@ -148,12 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1ACB4261C9835C0000A1BE8 /* BarGraph.swift in Sources */,
-				A1ACB4241C98261A000A1BE8 /* NotifyControllerProtocol.swift in Sources */,
-				A1ACB4221C97FFCE000A1BE8 /* AppState.swift in Sources */,
-				A1ACB4281C9849CA000A1BE8 /* GraphDatasource.swift in Sources */,
-				A1ACB4121C97FBDF000A1BE8 /* ViewController.swift in Sources */,
-				A1ACB4101C97FBDF000A1BE8 /* AppDelegate.swift in Sources */,
+				21695C481C997E9C00B29360 /* WrittenLinesOfCodeObject.swift in Sources */,
+				21695C401C9979F000B29360 /* BarGraph.swift in Sources */,
+				21695C351C99795400B29360 /* ViewController.swift in Sources */,
+				21695C431C997A0500B29360 /* MonthSelectionView.swift in Sources */,
+				21695C311C99795400B29360 /* AppDelegate.swift in Sources */,
+				21695C461C997C0500B29360 /* DateTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +367,7 @@
 				A1ACB4201C97FBDF000A1BE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
