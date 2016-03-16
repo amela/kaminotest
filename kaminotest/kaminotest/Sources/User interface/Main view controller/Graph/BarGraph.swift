@@ -10,15 +10,21 @@ import Foundation
 import UIKit
 import CoreGraphics
 
+public protocol BarGraphDataSource : NSObjectProtocol {
+    func barGraphValueForCustomObject(sender: BarGraph, item: AnyObject) -> Double
+}
+
 
 public class BarGraph: UIView {
     // public
+
+    weak var dataSource: BarGraphDataSource?
     
     var barColor: UIColor = UIColor.yellowColor()
     
     var numberOfBars = 0
     var barWidth: CGFloat = 20.0
-    var myBarData = [Double]()
+    var myBarData = [AnyObject]()
   
     var myScale = 20.0
     
@@ -38,11 +44,6 @@ public class BarGraph: UIView {
             return // can not draw if no elements are present
         }
         
-        if myBarData.maxElement() > myScale {
-            myScale = myBarData.maxElement()!
-        }
-        
-        
         let context = UIGraphicsGetCurrentContext()
         
         var x = CGFloat(0)
@@ -56,9 +57,9 @@ public class BarGraph: UIView {
         
         x = x + s/CGFloat(2) - barWidth/CGFloat(2)
         
-        for i in 0...myBarData.count-1 {
-            
-            let scaleY = y/CGFloat(myScale)*CGFloat(myBarData[i])
+        myBarData.forEach { item in
+            let value = dataSource?.barGraphValueForCustomObject(self, item: item) ?? 0.0
+            let scaleY = y/CGFloat(myScale)*CGFloat(value)
             
             CGContextAddRect(context, CGRect(x: x, y: y, width: barWidth, height: -scaleY))
             CGContextSetFillColorWithColor(context, barColor.CGColor)

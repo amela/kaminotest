@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, MonthSelectionViewDelegate {
+class ViewController: UIViewController, MonthSelectionViewDelegate, BarGraphDataSource {
     
     // MARK: -  Outlets
     
@@ -22,6 +22,10 @@ class ViewController: UIViewController, MonthSelectionViewDelegate {
         super.viewDidLoad()
         
         monthSelectionView.delegate = self
+        barGraph.dataSource = self
+        
+        barGraph.myScale = 30000
+        
         monthSelectionView.selectedDate = NSDate() // set the selected date as current
     }
     
@@ -31,12 +35,16 @@ class ViewController: UIViewController, MonthSelectionViewDelegate {
         let startDate = DateTools.beginningOfMonth(date)
         let endDate = DateTools.addMonthsToDate(startDate, count: 1)
         
-        var countArray = [Double]()
-        WrittenLinesOfCodeObject.fetchDataBetween(startDate, endDate: endDate).forEach { item in
-            countArray.append(Double(item.count))
-        }
-        self.barGraph.myBarData = countArray
+        self.barGraph.myBarData = WrittenLinesOfCodeObject.fetchDataBetween(startDate, endDate: endDate)
         self.barGraph.reload()
+    }
+    
+    func barGraphValueForCustomObject(sender: BarGraph, item: AnyObject) -> Double {
+        if let item = item as? WrittenLinesOfCodeObject {
+            return Double(item.count)
+        } else {
+            return 0.0
+        }
     }
 }
 
