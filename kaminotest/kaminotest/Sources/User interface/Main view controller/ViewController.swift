@@ -24,7 +24,7 @@ class ViewController: UIViewController, MonthSelectionViewDelegate, BarGraphData
         monthSelectionView.delegate = self
         barGraph.dataSource = self
         
-        barGraph.myScale = 30000
+        barGraph.myScale = 40000
         
         monthSelectionView.selectedDate = NSDate() // set the selected date as current
     }

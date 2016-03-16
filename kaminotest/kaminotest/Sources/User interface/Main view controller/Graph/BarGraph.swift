@@ -23,7 +23,7 @@ public class BarGraph: UIView {
     var barColor: UIColor = UIColor.yellowColor()
     
     var numberOfBars = 0
-    var barWidth: CGFloat = 20.0
+    var barWidth: CGFloat = 5.0
     var myBarData = [AnyObject]()
   
     var myScale = 20.0

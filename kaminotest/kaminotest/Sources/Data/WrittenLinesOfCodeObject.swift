@@ -47,7 +47,4 @@ class WrittenLinesOfCodeObject: NSObject {
         
         mockedData = newData
     }
-    
-    
-    
 }
