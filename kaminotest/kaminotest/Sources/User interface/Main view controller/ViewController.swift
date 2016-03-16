@@ -8,40 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController, SelectedDateChanged {
+class ViewController: UIViewController, MonthSelectionViewDelegate {
     
     // MARK: -  Outlets
     
 
     @IBOutlet weak var barGraph: BarGraph!
     
+    @IBOutlet weak var monthSelectionView: MonthSelectionView!
     
     
-    // delegate
-    func changedDate() {
-        // TODO: add inject new data to the graph view
-    }
-    
-    // MARK: -  Override
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AppState.stateDate = AppState.date
-        //print(AppState.sharedstate.stateDate)
-        
-        AppState.formateDateToMonthString()
-        
-        AppState.dateStateChanged = self
-        
-}
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        monthSelectionView.delegate = self
+        monthSelectionView.selectedDate = NSDate() // set the selected date as current
     }
-
-
+    
+    
+    // delegate
+    func monthSelectionViewChangedSelectedDate(sender: MonthSelectionView, date: NSDate) {
+        // TODO: add inject new data to the graph view
+    }
 }
 

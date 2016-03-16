@@ -8,17 +8,28 @@
 
 import UIKit
 
-class MonthSelectionView: UIView {
+public protocol MonthSelectionViewDelegate : NSObjectProtocol {
+    func monthSelectionViewChangedSelectedDate(sender: MonthSelectionView, date: NSDate)
+}
 
+public class MonthSelectionView: UIView {
+
+    public weak var delegate: MonthSelectionViewDelegate?
+    public var selectedDate = NSDate() {
+        didSet {
+            updateLabel()
+        }
+    }
+    
+    
     @IBOutlet weak var stateMonthLabel: UILabel!
     
     // MARK: -  Button actions
     
     @IBAction func leftButton(sender: UIButton) {
-        print("month--")
-        AppState.stateDate = AppState.substractMonthToDate()
-        
-        AppState.formateDateToMonthString()
+        if let newDate = DateTools.addMonthsToDate(selectedDate, count: -1) {
+            selectedDate = newDate
+        }
         
         let newLabel = UILabel(frame: stateMonthLabel.frame)
         newLabel.text = stateMonthLabel.text
@@ -44,10 +55,9 @@ class MonthSelectionView: UIView {
     
     
     @IBAction func rightButton(sender: UIButton) {
-        print("month++")
-        AppState.stateDate = AppState.addMonthToDate()
-        
-        AppState.formateDateToMonthString()
+        if let newDate = DateTools.addMonthsToDate(selectedDate, count: 1) {
+            selectedDate = newDate
+        }
         
         let newLabel = UILabel(frame: stateMonthLabel.frame)
         newLabel.text = stateMonthLabel.text
@@ -71,9 +81,6 @@ class MonthSelectionView: UIView {
 
     
     private func updateLabel() {
-        if let month = AppState.monthStateString {
-            stateMonthLabel.text = month
-        }
-        
+        stateMonthLabel.text = DateTools.formateDateToMonthString(selectedDate)
     }
 }

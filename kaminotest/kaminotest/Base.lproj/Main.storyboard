@@ -123,6 +123,7 @@
                     </view>
                     <connections>
                         <outlet property="barGraph" destination="2R5-kY-2zK" id="uYs-yn-RI7"/>
+                        <outlet property="monthSelectionView" destination="Q6V-Ew-SfA" id="Ipz-Rg-SSS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
