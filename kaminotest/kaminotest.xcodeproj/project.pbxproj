@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		21695C301C99795400B29360 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C271C99795400B29360 /* AppState.swift */; };
 		21695C311C99795400B29360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C291C99795400B29360 /* AppDelegate.swift */; };
-		21695C321C99795400B29360 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C2C1C99795400B29360 /* BarGraph.swift */; };
-		21695C331C99795400B29360 /* GraphDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C2D1C99795400B29360 /* GraphDatasource.swift */; };
-		21695C341C99795400B29360 /* NotifyControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C2E1C99795400B29360 /* NotifyControllerProtocol.swift */; };
 		21695C351C99795400B29360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C2F1C99795400B29360 /* ViewController.swift */; };
+		21695C3D1C9979AA00B29360 /* NotifyControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C391C9979AA00B29360 /* NotifyControllerProtocol.swift */; };
+		21695C401C9979F000B29360 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C3E1C9979F000B29360 /* BarGraph.swift */; };
+		21695C411C9979F000B29360 /* GraphDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C3F1C9979F000B29360 /* GraphDatasource.swift */; };
+		21695C431C997A0500B29360 /* MonthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C421C997A0500B29360 /* MonthSelectionView.swift */; };
 		A1ACB4151C97FBDF000A1BE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4131C97FBDF000A1BE8 /* Main.storyboard */; };
 		A1ACB4171C97FBDF000A1BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4161C97FBDF000A1BE8 /* Assets.xcassets */; };
 		A1ACB41A1C97FBDF000A1BE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4181C97FBDF000A1BE8 /* LaunchScreen.storyboard */; };
@@ -21,10 +22,11 @@
 /* Begin PBXFileReference section */
 		21695C271C99795400B29360 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		21695C291C99795400B29360 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		21695C2C1C99795400B29360 /* BarGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
-		21695C2D1C99795400B29360 /* GraphDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDatasource.swift; sourceTree = "<group>"; };
-		21695C2E1C99795400B29360 /* NotifyControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyControllerProtocol.swift; sourceTree = "<group>"; };
 		21695C2F1C99795400B29360 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21695C391C9979AA00B29360 /* NotifyControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyControllerProtocol.swift; sourceTree = "<group>"; };
+		21695C3E1C9979F000B29360 /* BarGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
+		21695C3F1C9979F000B29360 /* GraphDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDatasource.swift; sourceTree = "<group>"; };
+		21695C421C997A0500B29360 /* MonthSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthSelectionView.swift; sourceTree = "<group>"; };
 		A1ACB40C1C97FBDF000A1BE8 /* kaminotest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kaminotest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1ACB4141C97FBDF000A1BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1ACB4161C97FBDF000A1BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,12 +82,29 @@
 		21695C2B1C99795400B29360 /* Main view controller */ = {
 			isa = PBXGroup;
 			children = (
-				21695C2C1C99795400B29360 /* BarGraph.swift */,
-				21695C2D1C99795400B29360 /* GraphDatasource.swift */,
-				21695C2E1C99795400B29360 /* NotifyControllerProtocol.swift */,
+				21695C361C9979AA00B29360 /* Date selection view */,
+				21695C3A1C9979AA00B29360 /* Graph */,
 				21695C2F1C99795400B29360 /* ViewController.swift */,
 			);
 			path = "Main view controller";
+			sourceTree = "<group>";
+		};
+		21695C361C9979AA00B29360 /* Date selection view */ = {
+			isa = PBXGroup;
+			children = (
+				21695C391C9979AA00B29360 /* NotifyControllerProtocol.swift */,
+				21695C421C997A0500B29360 /* MonthSelectionView.swift */,
+			);
+			path = "Date selection view";
+			sourceTree = "<group>";
+		};
+		21695C3A1C9979AA00B29360 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				21695C3E1C9979F000B29360 /* BarGraph.swift */,
+				21695C3F1C9979F000B29360 /* GraphDatasource.swift */,
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 		A1ACB4031C97FBDE000A1BE8 = {
@@ -188,12 +207,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21695C401C9979F000B29360 /* BarGraph.swift in Sources */,
+				21695C3D1C9979AA00B29360 /* NotifyControllerProtocol.swift in Sources */,
 				21695C351C99795400B29360 /* ViewController.swift in Sources */,
-				21695C321C99795400B29360 /* BarGraph.swift in Sources */,
-				21695C331C99795400B29360 /* GraphDatasource.swift in Sources */,
+				21695C411C9979F000B29360 /* GraphDatasource.swift in Sources */,
+				21695C431C997A0500B29360 /* MonthSelectionView.swift in Sources */,
 				21695C311C99795400B29360 /* AppDelegate.swift in Sources */,
 				21695C301C99795400B29360 /* AppState.swift in Sources */,
-				21695C341C99795400B29360 /* NotifyControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

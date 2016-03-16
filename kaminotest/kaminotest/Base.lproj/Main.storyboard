@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
                                 <color key="backgroundColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6V-Ew-SfA">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q6V-Ew-SfA" customClass="MonthSelectionView" customModule="kaminotest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="600" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jel-Tj-yw2">
@@ -36,7 +36,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="rightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M29-s4-wDT"/>
+                                            <action selector="rightButton:" destination="Q6V-Ew-SfA" eventType="touchUpInside" id="0xB-2P-gfz"/>
                                         </connections>
                                     </button>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nS9-9s-vhs">
@@ -67,7 +67,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="leftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pNQ-DZ-xN6"/>
+                                            <action selector="leftButton:" destination="Q6V-Ew-SfA" eventType="touchUpInside" id="kvB-9h-mfm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -83,6 +83,9 @@
                                     <constraint firstItem="fgR-hp-gCi" firstAttribute="centerY" secondItem="Q6V-Ew-SfA" secondAttribute="centerY" id="sab-mu-uN2"/>
                                     <constraint firstAttribute="trailing" secondItem="jel-Tj-yw2" secondAttribute="trailing" constant="20" symbolic="YES" id="xH5-6L-hbo"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="stateMonthLabel" destination="Oms-98-b8S" id="D7c-4Q-EfC"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2R5-kY-2zK" customClass="BarGraph" customModule="kaminotest" customModuleProvider="target">
                                 <rect key="frame" x="60" y="90" width="480" height="192"/>
@@ -120,7 +123,6 @@
                     </view>
                     <connections>
                         <outlet property="barGraph" destination="2R5-kY-2zK" id="uYs-yn-RI7"/>
-                        <outlet property="stateMonthLabel" destination="Oms-98-b8S" id="ZkB-vg-Rre"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
