@@ -68,8 +68,4 @@ public class BarGraph: UIView {
         drawBars()
     }
     
-    override public func awakeFromNib() {
-        let dataSource = GraphDatasource()
-        myBarData = GraphDatasource.myGraphData
-    }
 }

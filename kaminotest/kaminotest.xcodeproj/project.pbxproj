@@ -10,7 +10,6 @@
 		21695C311C99795400B29360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C291C99795400B29360 /* AppDelegate.swift */; };
 		21695C351C99795400B29360 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C2F1C99795400B29360 /* ViewController.swift */; };
 		21695C401C9979F000B29360 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C3E1C9979F000B29360 /* BarGraph.swift */; };
-		21695C411C9979F000B29360 /* GraphDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C3F1C9979F000B29360 /* GraphDatasource.swift */; };
 		21695C431C997A0500B29360 /* MonthSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C421C997A0500B29360 /* MonthSelectionView.swift */; };
 		21695C461C997C0500B29360 /* DateTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21695C451C997C0500B29360 /* DateTools.swift */; };
 		A1ACB4151C97FBDF000A1BE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1ACB4131C97FBDF000A1BE8 /* Main.storyboard */; };
@@ -22,7 +21,6 @@
 		21695C291C99795400B29360 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21695C2F1C99795400B29360 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		21695C3E1C9979F000B29360 /* BarGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
-		21695C3F1C9979F000B29360 /* GraphDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphDatasource.swift; sourceTree = "<group>"; };
 		21695C421C997A0500B29360 /* MonthSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthSelectionView.swift; sourceTree = "<group>"; };
 		21695C451C997C0500B29360 /* DateTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTools.swift; sourceTree = "<group>"; };
 		A1ACB40C1C97FBDF000A1BE8 /* kaminotest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kaminotest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				21695C3E1C9979F000B29360 /* BarGraph.swift */,
-				21695C3F1C9979F000B29360 /* GraphDatasource.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -214,7 +211,6 @@
 			files = (
 				21695C401C9979F000B29360 /* BarGraph.swift in Sources */,
 				21695C351C99795400B29360 /* ViewController.swift in Sources */,
-				21695C411C9979F000B29360 /* GraphDatasource.swift in Sources */,
 				21695C431C997A0500B29360 /* MonthSelectionView.swift in Sources */,
 				21695C311C99795400B29360 /* AppDelegate.swift in Sources */,
 				21695C461C997C0500B29360 /* DateTools.swift in Sources */,
