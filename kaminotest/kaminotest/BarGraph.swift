@@ -55,7 +55,7 @@ public class BarGraph: UIView {
             
             let scaleY = y/CGFloat(myScale)*CGFloat(myBarData[i])
             
-            CGContextAddRect(context, CGRect(x: x, y: y, width: 20, height: -scaleY))
+            CGContextAddRect(context, CGRect(x: x, y: y, width: barWidth, height: -scaleY))
             CGContextSetFillColorWithColor(context, barColor.CGColor)
             CGContextFillPath(context)
             
